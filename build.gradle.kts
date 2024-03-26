@@ -15,6 +15,7 @@ allprojects {
 
     repositories {
         mavenCentral()
+        maven("https://jitpack.io")
         maven("https://repo.codemc.org/repository/maven-public/")
         maven("https://repo.rosewooddev.io/repository/public/")
         maven("https://repo.papermc.io/repository/maven-public/")
@@ -23,7 +24,8 @@ allprojects {
 
     dependencies {
         // Dependencies that we want to shade in
-        implementation("com.github.cryptomorin:XSeries:9.8.1") { isTransitive = false }
+//        implementation("com.github.cryptomorin:XSeries:9.8.1") { isTransitive = false }
+        implementation("com.github.ShiftSad:XSeries:aab95f09f8") { isTransitive = false }
 
         // Other dependencies that are not required or already available at runtime
         compileOnly("org.jetbrains:annotations:24.1.0")
